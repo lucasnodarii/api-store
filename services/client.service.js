@@ -14,6 +14,9 @@ const clientService = {
     },
     deleteClientService: async function (id){
         await clientRepository.deleteClientRepository(id);
+    },
+    updateClientService: async function(client){
+        return await clientRepository.updateClientRepository(client);
     }
 
 

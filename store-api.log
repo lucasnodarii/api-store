@@ -10,3 +10,14 @@
 2023-02-21T17:31:17.482Z [store-api] info: GET /client
 2023-02-21T17:31:38.752Z [store-api] info: DELETE /client
 2023-02-21T17:31:42.689Z [store-api] info: GET /client
+2023-02-21T17:45:28.441Z [store-api] info: POST /client - {"client_id":7,"name":"João Silva","cpf":"12345678900","phone":"49998985544","email":"joao@gmail.com","adress":"Rua X, n.190"}
+2023-02-21T17:45:31.400Z [store-api] info: GET /client
+2023-02-21T17:45:44.827Z [store-api] info: DELETE /client
+2023-02-21T17:46:40.676Z [store-api] error: PUT  - Submit all fields for registration
+2023-02-21T17:48:17.552Z [store-api] info: GET /client
+2023-02-21T17:49:03.511Z [store-api] error: PUT  - Submit all fields for update
+2023-02-21T17:49:41.622Z [store-api] error: PUT  - column "cliente_id" does not exist
+2023-02-21T17:50:04.098Z [store-api] info: PUT /client - undefined
+2023-02-21T17:50:17.237Z [store-api] info: GET /client
+2023-02-21T17:51:02.857Z [store-api] info: PUT /client - {"client_id":3,"name":"Maria Santos","cpf":"25395684588","phone":"52999741133","email":"maria@gmail.com","adress":"Rua Y, n.80"}
+2023-02-21T17:51:06.198Z [store-api] info: GET /client
