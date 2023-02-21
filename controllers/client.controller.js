@@ -9,7 +9,7 @@ const clientController = {
         !client.cpf ||
         !client.phone ||
         !client.email ||
-        !client.address
+        !client.adress
       ) {
         throw new Error("Submit all fields for registration");
       }
@@ -20,6 +20,15 @@ const clientController = {
       next(error);
     }
   },
+  getClients: async function(req, res, next){
+    try{   
+        res.send(await clientService.getClientsService());
+        logger.info(`GET /client`);
+
+    }catch(error){
+        next(error)
+    }
+  }
 };
 
 export default clientController;

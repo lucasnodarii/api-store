@@ -1,1 +1,7 @@
 2023-02-20T20:33:57.224Z [store-api] error: POST  - Submit all fields for registration
+2023-02-21T16:18:04.208Z [store-api] error: POST  - column "address" of relation "clients" does not exist
+2023-02-21T16:19:23.756Z [store-api] info: POST /client - {"name":"João Silva","cpf":"12345678900","phone":"49998985544","email":"joao@gmail.com","adress":"Rua X, n.190"}
+2023-02-21T16:27:01.900Z [store-api] info: POST /client - {"name":"João Silva","cpf":"12345678900","phone":"49998985544","email":"joao@gmail.com","adress":"Rua X, n.190"}
+2023-02-21T16:55:34.164Z [store-api] error: POST  - conn is not defined
+2023-02-21T16:55:51.886Z [store-api] info: POST /client - {"name":"João Silva","cpf":"12345678900","phone":"49998985544","email":"joao@gmail.com","adress":"Rua X, n.190"}
+2023-02-21T17:13:11.223Z [store-api] info: GET /client
