@@ -21,3 +21,9 @@
 2023-02-21T17:50:17.237Z [store-api] info: GET /client
 2023-02-21T17:51:02.857Z [store-api] info: PUT /client - {"client_id":3,"name":"Maria Santos","cpf":"25395684588","phone":"52999741133","email":"maria@gmail.com","adress":"Rua Y, n.80"}
 2023-02-21T17:51:06.198Z [store-api] info: GET /client
+2023-02-21T18:05:37.576Z [store-api] info: POST /supplier - {"supplier_id":1,"name":"Supermercado Viza","cnpj":"033128259000190","phone":"4935669563","email":"contato@superviza.com","adress":"Rod SC 355, n.1090"}
+2023-02-21T18:05:40.983Z [store-api] info: GET /supplier
+2023-02-21T18:05:43.933Z [store-api] info: GET /supplier
+2023-02-21T18:05:49.260Z [store-api] info: GET /supplier
+2023-02-21T18:06:21.987Z [store-api] info: PUT /supplier - {"supplier_id":1,"name":"Via Atacadista","cnpj":"033128259000190","phone":"4935669563","email":"contato@viatacado.com","adress":"Rod SC 355, n.1090"}
+2023-02-21T18:06:26.854Z [store-api] info: GET /supplier

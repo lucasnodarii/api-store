@@ -1,17 +1,17 @@
 import { connect } from "./db.js";
 
-const clientRepository = {
-  createClientRepository: async function (client) {
+const supplierRepository = {
+  createSupplierRepository: async function (supplier) {
     const conn = await connect();
     try {
       const sql =
-        "INSERT INTO clients (name, cpf, phone, email, adress) VALUES ($1, $2, $3, $4, $5) RETURNING *";
+        "INSERT INTO suppliers (name, cnpj, phone, email, adress) VALUES ($1, $2, $3, $4, $5) RETURNING *";
       const values = [
-        client.name,
-        client.cpf,
-        client.phone,
-        client.email,
-        client.adress,
+        supplier.name,
+        supplier.cnpj,
+        supplier.phone,
+        supplier.email,
+        supplier.adress,
       ];
       const res = await conn.query(sql, values);
       return res.rows[0];
@@ -21,10 +21,10 @@ const clientRepository = {
       conn.release();
     }
   },
-  getClientsRepository: async function () {
+  getSuppliersRepository: async function () {
     const conn = await connect();
     try {
-      const res = await conn.query("SELECT * FROM clients");
+      const res = await conn.query("SELECT * FROM suppliers");
       return res.rows;
     } catch (error) {
       throw error;
@@ -32,11 +32,11 @@ const clientRepository = {
       conn.release();
     }
   },
-  getClientRepository: async function (id) {
+  getSupplierRepository: async function (id) {
     const conn = await connect();
     try {
       const res = await conn.query(
-        "SELECT * FROM clients WHERE client_id = $1",
+        "SELECT * FROM suppliers WHERE supplier_id = $1",
         [id]
       );
       return res.rows[0];
@@ -46,28 +46,28 @@ const clientRepository = {
       conn.release();
     }
   },
-  deleteClientRepository: async function (id) {
+  deleteSupplierRepository: async function (id) {
     const conn = await connect();
     try {
-      await conn.query("DELETE FROM clients WHERE client_id = $1", [id]);
+      await conn.query("DELETE FROM suppliers WHERE supplier_id = $1", [id]);
     } catch (error) {
       throw error;
     } finally {
       conn.release();
     }
   },
-  updateClientRepository: async function (client) {
+  updateSupplierRepository: async function (supplier) {
     const conn = await connect();
     try {
       const sql =
-        "UPDATE clients SET name = $1, cpf = $2, phone = $3, email = $4, adress = $5 WHERE client_id = $6 RETURNING *";
+        "UPDATE suppliers SET name = $1, cnpj = $2, phone = $3, email = $4, adress = $5 WHERE supplier_id = $6 RETURNING *";
       const values = [
-        client.name,
-        client.cpf,
-        client.phone,
-        client.email,
-        client.adress,
-        client.client_id,
+        supplier.name,
+        supplier.cnpj,
+        supplier.phone,
+        supplier.email,
+        supplier.adress,
+        supplier.supplier_id,
       ];
       const res = await conn.query(sql, values);
       return res.rows[0];
@@ -79,4 +79,4 @@ const clientRepository = {
   },
 };
 
-export default clientRepository;
+export default supplierRepository;

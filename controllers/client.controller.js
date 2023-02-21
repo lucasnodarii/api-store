@@ -13,7 +13,7 @@ const clientController = {
       ) {
         throw new Error("Submit all fields for registration");
       }
-      client = await clientService.createClientService(client)
+      client = await clientService.createClientService(client);
       res.send(client);
       logger.info(`POST /client - ${JSON.stringify(client)}`);
     } catch (error) {
@@ -58,7 +58,7 @@ const clientController = {
       ) {
         throw new Error("Submit all fields for update");
       }
-      client = await clientService.updateClientService(client)
+      client = await clientService.updateClientService(client);
       res.send(client);
       logger.info(`PUT /client - ${JSON.stringify(client)}`);
     } catch (error) {
