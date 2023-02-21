@@ -34,3 +34,19 @@
 2023-02-21T18:53:34.687Z [store-api] error: POST  - supplierRepository.getSupplier is not a function
 2023-02-21T18:54:10.993Z [store-api] error: POST  - Supplier not exists
 2023-02-21T18:54:15.353Z [store-api] info: POST /product - {"product_id":4,"supplier_id":1,"name":"Arroz Tia Benta 1kg","description":"Arroz parabolizado Tipo 1","value":"10.6","stock":50}
+2023-02-21T18:58:51.767Z [store-api] info: PUT /product - {"product_id":1,"supplier_id":1,"name":"Arroz parabolizado","description":"Arro branco tipo I","value":"12.65","stock":50}
+2023-02-21T18:58:55.370Z [store-api] error: PUT  - Supplier not exists
+2023-02-21T19:11:34.716Z [store-api] error: POST  - Unexpected token } in JSON at position 81
+2023-02-21T19:11:45.157Z [store-api] error: POST  - date/time field value out of range: "21/02/2023"
+2023-02-21T19:12:02.179Z [store-api] error: POST  - insert or update on table "sales" violates foreign key constraint "fk_clients"
+2023-02-21T19:12:14.605Z [store-api] info: GET /client
+2023-02-21T19:12:20.232Z [store-api] info: POST /sale - {"sale_id":2,"client_id":3,"product_id":1,"value":"50.9","date":"2023-02-02T03:00:00.000Z"}
+2023-02-21T19:13:56.063Z [store-api] info: PUT /sale - {"sale_id":2,"client_id":3,"product_id":1,"value":"150.9","date":"2023-02-02T03:00:00.000Z"}
+2023-02-21T19:14:03.401Z [store-api] info: GET /sale
+2023-02-21T19:14:24.555Z [store-api] info: POST /sale - {"sale_id":3,"client_id":3,"product_id":1,"value":"50.9","date":"2023-02-02T03:00:00.000Z"}
+2023-02-21T19:14:32.338Z [store-api] info: GET /sale
+2023-02-21T19:14:35.874Z [store-api] info: DELETE /sale
+2023-02-21T19:14:37.608Z [store-api] info: GET /sale
+2023-02-21T19:20:08.170Z [store-api] error: POST  - Product not exists
+2023-02-21T19:20:15.028Z [store-api] error: POST  - Client not exists
+2023-02-21T19:20:18.749Z [store-api] info: POST /sale - {"sale_id":4,"client_id":3,"product_id":1,"value":"50.9","date":"2023-02-02T03:00:00.000Z"}
