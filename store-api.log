@@ -27,3 +27,10 @@
 2023-02-21T18:05:49.260Z [store-api] info: GET /supplier
 2023-02-21T18:06:21.987Z [store-api] info: PUT /supplier - {"supplier_id":1,"name":"Via Atacadista","cnpj":"033128259000190","phone":"4935669563","email":"contato@viatacado.com","adress":"Rod SC 355, n.1090"}
 2023-02-21T18:06:26.854Z [store-api] info: GET /supplier
+2023-02-21T18:43:31.440Z [store-api] info: POST /product - {"product_id":1,"supplier_id":1,"name":"Arroz Tia Benta 1kg","description":"Arroz parabolizado Tipo 1","value":"10.6","stock":50}
+2023-02-21T18:43:54.629Z [store-api] info: GET /product
+2023-02-21T18:44:20.697Z [store-api] error: POST  - insert or update on table "products" violates foreign key constraint "fk_suppliers"
+2023-02-21T18:44:26.365Z [store-api] error: POST  - insert or update on table "products" violates foreign key constraint "fk_suppliers"
+2023-02-21T18:53:34.687Z [store-api] error: POST  - supplierRepository.getSupplier is not a function
+2023-02-21T18:54:10.993Z [store-api] error: POST  - Supplier not exists
+2023-02-21T18:54:15.353Z [store-api] info: POST /product - {"product_id":4,"supplier_id":1,"name":"Arroz Tia Benta 1kg","description":"Arroz parabolizado Tipo 1","value":"10.6","stock":50}

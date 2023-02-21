@@ -27,7 +27,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use("/client", clientsRouter)
-app.use("/produtc", productsRouter)
+app.use("/product", productsRouter)
 app.use("/supplier", suppliersRouter)
 app.use("/sale", salesRouter)
 app.use((error, req, res, next) => {
