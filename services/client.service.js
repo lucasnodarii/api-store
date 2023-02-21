@@ -7,6 +7,13 @@ const clientService = {
 
     getClientsService: async function (){
         return await clientRepository.getClientsRepository();
+    },
+
+    getClientService: async function (id){
+        return await clientRepository.getClientRepository(id);
+    },
+    deleteClientService: async function (id){
+        await clientRepository.deleteClientRepository(id);
     }
 
 

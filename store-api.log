@@ -5,3 +5,8 @@
 2023-02-21T16:55:34.164Z [store-api] error: POST  - conn is not defined
 2023-02-21T16:55:51.886Z [store-api] info: POST /client - {"name":"João Silva","cpf":"12345678900","phone":"49998985544","email":"joao@gmail.com","adress":"Rua X, n.190"}
 2023-02-21T17:13:11.223Z [store-api] info: GET /client
+2023-02-21T17:24:50.626Z [store-api] error: GET  - clientService.getClient is not a function
+2023-02-21T17:25:12.476Z [store-api] info: GET /client
+2023-02-21T17:31:17.482Z [store-api] info: GET /client
+2023-02-21T17:31:38.752Z [store-api] info: DELETE /client
+2023-02-21T17:31:42.689Z [store-api] info: GET /client
