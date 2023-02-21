@@ -65,3 +65,6 @@
 2023-02-21T20:46:23.394Z [store-api] info: GET /sale
 2023-02-21T20:46:39.287Z [store-api] info: DELETE /sale
 2023-02-21T20:46:49.393Z [store-api] info: GET /product
+2023-02-21T20:58:29.023Z [store-api] info: GET /sale
+2023-02-21T20:58:54.783Z [store-api] info: GET /sale
+2023-02-21T20:58:58.751Z [store-api] info: GET /sale

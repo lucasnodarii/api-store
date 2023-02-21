@@ -26,6 +26,17 @@ const saleRepository = {
       conn.release();
     }
   },
+  getSalesByProductIdRepository: async function (productId) {
+    const conn = await connect();
+    try {
+      const res = await conn.query("SELECT * FROM sales WHERE product_id = $1", [productId]);
+      return res.rows;
+    } catch (error) {
+      throw error;
+    } finally {
+      conn.release();
+    }
+  },
   getSaleRepository: async function (id) {
     const conn = await connect();
     try {

@@ -26,7 +26,10 @@ const saleService = {
     }
   },
 
-  getSalesService: async function () {
+  getSalesService: async function (productId) {
+    if (productId) {
+      return await saleRepository.getSalesByProductIdRepository(productId);
+    }
     return await saleRepository.getSalesRepository();
   },
 
@@ -35,17 +38,16 @@ const saleService = {
   },
   deleteSaleService: async function (id) {
     const sale = await saleRepository.getSaleRepository(id);
-    if(sale){
-      const product = await productRepository.getProductRepository(sale.product_id);
+    if (sale) {
+      const product = await productRepository.getProductRepository(
+        sale.product_id
+      );
       await saleRepository.deleteSaleRepository(id);
       product.stock++;
       await productRepository.updateProductRepository(product);
-    }else{
-      throw new Error("There are nor sale with this ID")
-      
+    } else {
+      throw new Error("There are nor sale with this ID");
     }
-
-
   },
   updateSaleService: async function (sale) {
     if (!(await productRepository.getProductRepository(sale.product_id))) {

@@ -21,7 +21,7 @@ const saleController = {
   },
   getSales: async function (req, res, next) {
     try {
-      res.send(await saleService.getSalesService());
+      res.send(await saleService.getSalesService(req.query.product_id));
       logger.info("GET /sale");
     } catch (error) {
       next(error);
