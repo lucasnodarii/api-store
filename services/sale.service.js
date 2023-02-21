@@ -4,15 +4,26 @@ import productRepository from "../repositories/product.repository.js";
 
 const saleService = {
   createSaleService: async function (sale) {
-    if (!(await productRepository.getProductRepository(sale.product_id))) {
+    const product = await productRepository.getProductRepository(
+      sale.product_id
+    );
+    if (!product) {
       throw new Error("Product not exists");
     }
 
-    if (!(await clientRepository.getClientRepository(sale.client_id))) {
+    const client = await clientRepository.getClientRepository(sale.client_id);
+    if (!client) {
       throw new Error("Client not exists");
     }
 
-    return await saleRepository.createSaleRepository(sale);
+    if (product.stock > 0) {
+      sale = await saleRepository.createSaleRepository(sale);
+      product.stock--;
+      await productRepository.updateProductRepository(product);
+      return sale;
+    } else {
+      throw new Error("There are not stock for this product");
+    }
   },
 
   getSalesService: async function () {
@@ -23,7 +34,18 @@ const saleService = {
     return await saleRepository.getSaleRepository(id);
   },
   deleteSaleService: async function (id) {
-    await saleRepository.deleteSaleRepository(id);
+    const sale = await saleRepository.getSaleRepository(id);
+    if(sale){
+      const product = await productRepository.getProductRepository(sale.product_id);
+      await saleRepository.deleteSaleRepository(id);
+      product.stock++;
+      await productRepository.updateProductRepository(product);
+    }else{
+      throw new Error("There are nor sale with this ID")
+      
+    }
+
+
   },
   updateSaleService: async function (sale) {
     if (!(await productRepository.getProductRepository(sale.product_id))) {
