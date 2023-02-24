@@ -68,3 +68,5 @@
 2023-02-21T20:58:29.023Z [store-api] info: GET /sale
 2023-02-21T20:58:54.783Z [store-api] info: GET /sale
 2023-02-21T20:58:58.751Z [store-api] info: GET /sale
+2023-02-24T16:10:31.059Z [store-api] error: GET  - connect ECONNREFUSED ::1:5432
+2023-02-24T16:11:55.930Z [store-api] info: GET /client
